@@ -1,5 +1,5 @@
-FROM alpine:edge
-MAINTAINER David Personette <dperson@gmail.com>
+FROM --platform=$TARGETPLATFORM alpine:edge
+LABEL MAINTAINER="Mr. Chu"
 
 # Install samba
 RUN apk --no-cache --no-progress upgrade && \
