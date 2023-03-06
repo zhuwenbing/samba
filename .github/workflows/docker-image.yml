@@ -1,4 +1,4 @@
-name: Docker Samba Image CI
+name: Samba Docker Image CI
 
 on:
   workflow_dispatch:
