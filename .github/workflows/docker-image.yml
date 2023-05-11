@@ -15,9 +15,8 @@ jobs:
         id: run
         uses: lucacome/docker-image-update-checker@v1.2.1
         with:
-          base-image: alpine:edge
+          base-image: alpine:latest
           image: ${{ secrets.DOCKER_USERNAME }}/samba:latest
-          platforms: linux/amd64
         continue-on-error: true
         if: github.event_name == 'schedule'
       - name: Check on result
