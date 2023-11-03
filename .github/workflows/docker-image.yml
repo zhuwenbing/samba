@@ -16,7 +16,7 @@ jobs:
         uses: lucacome/docker-image-update-checker@v1.2.1
         with:
           base-image: library/alpine:latest
-          image: ${{ secrets.DOCKER_USERNAME }}/samba:latest-alpine
+          image: ${{ secrets.DOCKER_USERNAME }}/samba:alpine
         continue-on-error: true
         if: github.event_name == 'schedule'
       - name: Check on result
@@ -45,7 +45,7 @@ jobs:
         run: |
           REPOSITORY=${{ secrets.DOCKER_USERNAME }}
           IMAGE_NAME=samba
-          TAGS="${REPOSITORY}/${IMAGE_NAME}:latest-alpine"
+          TAGS="${REPOSITORY}/${IMAGE_NAME}:alpine,${REPOSITORY}/${IMAGE_NAME}:latest"
           echo "tags=${TAGS}" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
