@@ -1,4 +1,4 @@
-FROM --platform=$TARGETPLATFORM alpine:latest
+FROM alpine:latest
 LABEL MAINTAINER="Mr. Chu"
 
 # Install samba
